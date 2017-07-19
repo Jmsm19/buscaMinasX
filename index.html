@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Inicio | Buscaminas</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="./css/estilos.css">
+</head>
+<body>
+
+	<audio class="bgm" src="./media/bgm.mp3" type="audio/mp3" loop="false" autoplay> 
+	<p>Si lees esto, tu navegador no puede reproducir música.</p>
+	</audio>
+
+	<div class="container bienvenida">
+		<!-- <ul>
+			<li>Crear un busca minas 3 x 3</li>
+			<li>Una mina con posición fija</li>
+			<li>Al hacer click en la bomba, mostrar mensaje de FIN DEL JUEGO</li>
+			<li>Ponerlo bonito</li>
+			<li><small>Buscar cómo generar la posición aleatoria para la Mina</small></li>
+		</ul> -->
+
+		<header class="row">
+      <div class="col-md-12 text-center">
+        <h1 class="titulo">BUSCAMINAS</h1>
+      </div>
+    </header>
+
+    <content class="row">
+      <div class="col-md-12 text-center">
+        <a href="./nivel-uno.html" class="btn btn-success btn-lg start" role="button" aria-pressed="false"><i class="fa fa-play" aria-hidden="true"></i> COMENZAR</a>
+      </div>
+    </content>
+
+	</div>
+
+	<footer>
+		<div class="container">
+			<p class="text-center">&copy; Copyright 2017 - Manten</p>
+		</div>
+	</footer>
+
+	<script src="./js/script.js"></script>
+	<script type="text/javascript">
+		var points = 0;
+
+		var audio = document.getElementsByClassName("bgm")[0];
+		audio.currentTime = 0;
+		audio.play();
+	</script>
+</body>
+</html>

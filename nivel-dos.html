@@ -1,0 +1,231 @@
+1<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Inicio | Buscaminas</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="./css/estilos.css">
+</head>
+<body>
+
+	<audio class="bgm" src="./media/bgm.mp3" type="audio/mp3" loop="false"> 
+	<p>Si lees esto, tu navegador no puede reproducir música.</p>
+	</audio>
+	
+	<header>
+		<div class="container">
+				<div class="row">
+					<div class="col-md-2 text-center">
+						<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#alerta">
+							<i class="fa fa-sign-out" aria-hidden="true"></i> SALIR
+						</button>
+					</div>
+
+					<div class="col-md-8 text-center">
+						<h1>Buscaminas - Nivel 2</h1>
+					</div>
+
+					<div class="col-md-2 scoring">
+						<p class="score">Score: <span class="puntos"> 0 </span></p>
+					</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="container">
+		<!-- <ul>
+			<li>Crear un busca minas 3 x 3</li>
+			<li>Una mina con posición fija</li>
+			<li>Al hacer click en la bomba, mostrar mensaje de FIN DEL JUEGO</li>
+			<li>Ponerlo bonito</li>
+			<li><small>Buscar cómo generar la posición aleatoria para la Mina</small></li>
+		</ul> -->
+
+		<div class="caja" style="width: 1140px">
+			<div class="row">
+			  <div class="col-md-2">
+			  	<div class="card oculta" onclick="mostrar()">
+			  		<p onclick="" class="oculta" value="2">+2</p>
+			  	</div>
+			  </div>
+			  <div class="col-md-2" onclick="mostrar()">
+			  	<div class="card oculta">
+			  		<p class="oculta" value="4">+4</p>
+			  	</div>
+			  </div>
+			  <div class="col-md-2" onclick="mostrar()">
+			  	<div class="card oculta">
+						<img class="bomba" src="./img/bomba.png">
+					</div>
+			  </div>
+			  <div class="col-md-2" onclick="mostrar()">
+			  	<div class="card oculta">
+			  		<p class="oculta" value="3">+3</p>
+			  	</div>
+			  </div>
+			  <div class="col-md-2" onclick="mostrar()">
+			  	<div class="card oculta">
+			  		<p class="oculta" value="5">+5</p>
+			  	</div>
+			  </div>
+			  <div class="col-md-2" onclick="mostrar()">
+			  	<div class="card oculta">
+						<img class="bomba" src="./img/bomba.png">
+					</div>
+			  </div>
+			</div>
+
+			<div class="row centered">
+			  <div class="col-md-2" onclick="mostrar()">
+			  	<div class="card oculta">
+			  		<p class="oculta" value="2">+2</p>
+			  	</div>
+			  </div>
+			  <div class="col-md-2" onclick="mostrar()">
+			  	<div class="card oculta">
+						<img class="bomba" src="./img/bomba.png">
+					</div>
+			  </div>
+			  <div class="col-md-2" onclick="mostrar()">
+			  	<div class="card oculta">
+			  		<p class="oculta" value="3">+3</p>
+			  	</div>
+			  </div>
+			  <div class="col-md-2" onclick="mostrar()">
+			  	<div class="card oculta">
+			  		<p class="oculta" value="2">+2</p>
+			  	</div>
+			  </div>
+			  <div class="col-md-2" onclick="mostrar()">
+			  	<div class="card oculta">
+			  		<p class="oculta" value="9">+9</p>
+			  	</div>
+			  </div>
+			  <div class="col-md-2" onclick="mostrar()">
+			  	<div class="card oculta">
+			  		<p class="oculta" value="2">+2</p>
+			  	</div>
+			  </div>
+			</div>
+
+			<div class="row">
+			  <div class="col-md-2" onclick="mostrar()">
+			  	<div class="card oculta">
+			  		<p class="oculta" value="7">+7</p>
+			  	</div>
+			  </div>
+			  <div class="col-md-2" onclick="mostrar()">
+			  	<div class="card oculta">
+			  		<p class="oculta" value="2">+2</p>
+			  	</div>
+			  </div>
+			  <div class="col-md-2" onclick="mostrar()">
+			  	<div class="card oculta">
+			  		<p class="oculta" value="3">+3</p>
+			  	</div>
+			  </div>
+			  <div class="col-md-2" onclick="mostrar()">
+			  	<div class="card oculta">
+			  		<p class="oculta" value="3">+3</p>
+			  	</div>
+			  </div>
+			  <div class="col-md-2" onclick="mostrar()">
+			  	<div class="card oculta">
+						<img class="bomba" src="./img/bomba.png">
+					</div>
+			  </div>
+			  <div class="col-md-2" onclick="mostrar()">
+			  	<div class="card oculta">
+			  		<p class="oculta" value="4">+4</p>
+			  	</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="container">
+			<p class="text-center">&copy; Copyright 2017 - Manten</p>
+		</div>
+	</footer>
+
+	<div>
+		<!-- MODAL -->
+		<div id="alerta" class="modal fade" role="advertencia">
+		<div class="modal-dialog">
+			<!-- Contenido del Modal-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title text-center">¡ADVERTENCIA!</h4>
+				</div>
+				<div class="modal-body">
+					<p>¿Está seguro que desea dejar de jugar?</p>
+					<p>Si lo hace, su progreso hasta ahora se perderá.</p>
+				</div>
+				<div class="modal-footer">
+					<a href="./index.html" class="btn btn-danger" role="button" aria-pressed="false" style="margin: 15px 0 0 5px">
+						Sí, cerrar
+					</a>
+					<button type="button" class="btn btn-success" data-dismiss="modal">No, seguir jugando</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<!-- MODAL -->
+		<div id="ganar" class="modal fade" role="advertencia">
+		<div class="modal-dialog">
+			<!-- Contenido del Modal-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title win text-center">¡FELICITACIONES!</h4>
+				</div>
+				<div class="modal-body">
+					<p class="text-center">¡HAZ LOGRADO SOBREVIVIR AL CAMPO MINADO!</p>
+					<p class="text-center"><small>&#x1f608 Por ahora. &#x1f608</small></p>
+				</div>
+				<div class="modal-footer">
+					<a href="./index.html" class="btn btn-success" role="button" aria-pressed="false" style="margin: 15px 0 0 5px">
+						<i class="fa fa-arrow-left" aria-hidden="true"></i> Volver al inicio
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<!-- MODAL - PERDER -->
+		<div id="perder" class="modal fade" role="advertencia">
+		<div class="modal-dialog">
+			<!-- Contenido del Modal-->
+			<div class="modal-content perder">
+				<div class="modal-body perder">
+					<h1 class="text-center">¡ESTÁS MUERTO!</h1>
+					<p class="text-center"><small>&#x1f608 Y volverá a ocurrir. &#x1f608</small></p>
+				</div>
+				<div class="modal-footer">
+					<a href="./index.html" class="btn btn-danger" role="button" aria-pressed="false" style="margin: 15px 0 0 5px">
+						<i class="fa fa-arrow-left" aria-hidden="true"></i> Volver al inicio
+					</a>
+					<a href="./nivel-dos.html" class="btn btn-success" role="button" aria-pressed="false" style="margin: 15px 0 0 5px">
+						<i class="fa fa-refresh" aria-hidden="true"></i> Intentar de nuevo
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./js/script.js"></script>
+</body>
+</html>

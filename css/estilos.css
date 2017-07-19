@@ -1,0 +1,173 @@
+@font-face {
+	font-family: 'OptimusPrinceps';
+    src: url('./media/OptimusPrincepsSemiBold.ttf');
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #C9302C;
+	min-width: 900px;
+	color: #FFFFFF;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	letter-spacing: 3px;
+}
+
+header {
+	margin-top: 10px auto 0 auto;
+}
+
+h1 {
+	text-transform: uppercase;
+	text-shadow: 1px 3px 5px #232323;
+}
+
+.bienvenida {
+	height: 689.5px;
+}
+
+.bienvenida h1 {
+	margin-top: 100px;
+	margin-bottom: 100px;
+	font-size: 130px;
+	text-shadow: 1px 1px 90px #232323;
+}
+
+button {
+	margin: 15px 0;
+	border-radius: 5px;
+	box-shadow: 1px 1px 5px #232323;
+	letter-spacing: 2px;
+	outline: none;
+}
+
+button:focus {
+	outline: none;
+}
+
+.start {
+	padding-top: 30px;
+	height: 100px;
+	width: 250px;
+	font-size: 30px;
+}
+
+.scoring {
+	margin: 15px 0;
+	color: #000000;
+	border-radius: 5px;
+	background-color: #F2DEDE;
+	box-shadow: 1px 1px 5px #232323;
+}
+
+.score {
+	font-weight: bold;
+	padding: 9px 0;
+	height: 30px;
+	text-transform: uppercase;
+	font-size: 18px;
+}
+
+.score span {
+	color: #337AB7;
+	margin-left: 20px;
+}
+
+.caja {
+	margin: 20px auto 30px auto;
+	min-width: 650px;
+	padding: 0 20px;
+	/*max-width: 900px;*/
+	border-radius: 5px;
+	background-color: #425E2E;
+	background-image: url("../img/grama.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.card {
+	width: 150px;
+	height: 150px;
+	padding: 5px;
+	border-radius: 5px;
+	margin: 20px auto;
+	/*background-color: #FFF;*/
+	background-color: #4E342E;
+	box-shadow: 0 0 180px #425E2E inset;
+	color: #2E7D32;
+}
+
+.card p {
+	width: 100%;
+	font-size: 50px;
+	color: #232323;
+	text-align: center;
+	margin: 30px 0;
+	color: #2E7D32;
+	text-shadow: 0 0 10px #232323;
+	display: none;
+}
+
+.oculta {
+	/*background-color: #4E342E !important;*/
+	background-image: url('../img/tierra.jpg') !important;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+}
+
+div.oculta:hover {
+	cursor: pointer;
+	box-shadow: 0 0 100px #425E2E inset;
+}
+
+div.oculta:active {
+	position: relative;
+	top: 3px;
+	box-shadow: 0 0 100px #425E2E inset;
+}
+
+.bomba {
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+footer {
+	margin-top: 15px;
+}
+
+.modal-content {
+	color: #232323;
+}
+
+.modal-title {
+	color: #C9302C;
+}
+
+.win {
+	color: green !important;
+}
+
+.modal-body {
+	letter-spacing: 1px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.perder {
+	font-family: 'OptimusPrinceps';
+	text-shadow: 1px 1px 3px #232323;
+	background-color: #232323;
+	color: red;
+}
+
+.perder small {
+	height: 50px;
+	font-size: 15px;
+
+}
