@@ -171,3 +171,14 @@ footer {
 	font-size: 15px;
 
 }
+
+footer a,
+footer a:visited {
+	color: inherit;
+}
+
+footer a:hover,
+footer a:active {
+	font-weight: bold;
+	text-decoration: none;
+}
